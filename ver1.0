@@ -1,0 +1,67 @@
+class Pila(object):
+    
+    def __init__(self):
+        self.items=[]
+
+    def apilar (self,dato):
+        self.items.append(dato)
+
+    def desapilar(self):
+        if self.esta_vacia():
+            return None
+        else:
+            return self.items.pop()
+
+    def esta_vacia(self):
+        if len(self.items)==0:
+            return True
+        else:
+            return False
+
+class Cola (object):
+
+    def __init__(self):
+        self.items=[]
+
+    def encolar (self,dato):
+        self.items.append(dato)
+
+    def desencolar (self):
+        if self.esta_vacia():
+            return None
+        else:
+            return self.items.pop(0)
+
+    def esta_vacia(self):
+        if len(self.items)==0:
+            return True
+        else:
+            return False
+
+class Pelicula :
+
+    def __init__ (self, titulo, genero, protagonista, ano):
+        self.t = titulo
+        self.g = genero
+        self.p = protagonista
+        self.a = ano
+
+    def detalles (self):
+        return self.t +" "+ self.g +" "+ self.p +" "+ self.a
+
+    def getTitulo (self):
+        return self.t
+
+    def getGenero (self):
+        return self.g
+
+    def getProtagonista (self):
+        return self.p
+
+    def getAno (self):
+        return self.a
+Fin de la conversación
+Escribe un mensaje...
+
+Elegir archivos
+Elegir archivos
