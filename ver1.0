@@ -39,10 +39,15 @@ def buscar(pilaentrada,dato):
     return pilasalida
 
 def imprimirpila(pila):
-    while(not pila.esta_vacia()):
-        pelicula = pila.desapilar();
-        print('\n')
-        print("TITULO : ",pelicula.titulo," GENERO : ",pelicula.genero," PROTAGONISTA : ",pelicula.protagonista," AÑO : ",pelicula.ano)
+
+    if pila.esta_vacia():
+        print('Dato no encontrado')
+    else :
+        
+        while(not pila.esta_vacia()):
+            pelicula = pila.desapilar();
+            print('\n')
+            print("TITULO : ",pelicula.titulo," GENERO : ",pelicula.genero," PROTAGONISTA : ",pelicula.protagonista," AÑO : ",pelicula.ano)
 
 titanic = Pelicula('TITANIC','DRAMA','Leonardo Di Caprio','1997')
 harrypotter = Pelicula('HARRY POTTER','FANTASIA','Daniel Radcliffe','2001')
@@ -64,5 +69,4 @@ busqueda =input()
 
 resultado=buscar(catalogo,busqueda)
 imprimirpila(resultado)
-
 
